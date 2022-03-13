@@ -13,7 +13,19 @@
             <li><a href={{ url_for('home') }}>Journal-covid</a></li>
         </ul>
     </div>
-
+    <div class="content">
+        <h1 class="title">News:</h1>
+        <div class="container-flex">
+            {% for noticia in noticias %}
+                <div class="main-card">
+                    <h2>{{ noticia.get_titulo() }}</h2>
+                    <p>{{ noticia.get_resumo() }}</p>
+                    <p><a href="{{url_for('exibir_noticia', id=noticia.get_id())}}">Ler mais...</a></p>
+                </div>
+            {% endfor %}
+        </div>  
+    </div>
+<!--
     <div class="content">
         <h1 class="title">Hottest News:</h1>
         <div class="container-flex">
@@ -89,7 +101,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <script src="../static/js/main.js"></script>
 </body>
 </html>
