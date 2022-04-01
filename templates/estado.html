@@ -1,0 +1,18 @@
+{% extends "base.html"%}
+{% block content %}
+{% for noticia in noticias %}
+<h1 class="text-center">{{ noticia.get_estado().get_nome() }}</h1>
+<div class="d-flex flex-wrap justify-content-center">
+    <div class="d-inline-flex p-2 ">
+        <div class="card" style="width: 28rem;">
+            <img src="{{ noticia.get_imagem() }}" class="card-img-top" alt="..." width="450px" height="300px">
+            <div class="card-body">
+                <h5 class="card-title">{{ noticia.get_titulo() }}</h5>
+                <p class="card-text">{{ noticia.get_resumo() }}</p>
+                <a href={{ url_for('exibir_noticia', id = noticia.get_id()) }} class="btn btn-primary">Ler mais</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
