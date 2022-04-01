@@ -103,3 +103,10 @@ def exibir_noticia(id):
         if noticia[0].get_id() == int(id):
             return render_template("noticia.html", noticia=lista_noticias[int(id)], estados=lista_estados)
     return render_template ("index.html", noticias=lista_noticias)
+
+@app.route("/estado/<string:sigla>")
+def noticias_do_estado(sigla):
+    for estado in lista_estados:
+        if estado.get_sigla() == sigla:
+            return render_template("estado.html", noticias=estado.get_noticia_lista(), estados=lista_estados)
+    return render_template("index.html", estados=lista_estados)
