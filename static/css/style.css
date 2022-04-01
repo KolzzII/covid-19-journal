@@ -1,0 +1,19 @@
+.dropdown-menu {
+    height: 250px;
+    overflow-y: scroll;
+    min-width: 0 !important;
+    padding-left: 2px;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+.nav-link {
+    color: white;
+    font-size: 20px;
+}
+
+.card {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
