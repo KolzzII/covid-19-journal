@@ -1,7 +1,7 @@
 {% extends "base.html"%}
 {% block content %}
 <div class="container">
-    <h1 class="text-center">Hottest news</h1>
+    <h1 class="text-center p-4">Hottest news</h1>
     <div class="d-flex flex-wrap justify-content-center">
         {% for noticia in noticias %}
         {% for i in noticia %}
@@ -20,7 +20,7 @@
         {% endfor %}
         {% endfor %}
     </div>
-    <h1 class="text-center">Latest news</h1>
+    <h1 class="text-center p-4">Latest news</h1>
     <div class="d-flex flex-wrap justify-content-center">
         {% for noticia in noticias %}
         {% for i in noticia %}
