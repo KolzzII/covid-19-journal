@@ -1,3 +1,7 @@
+.content {
+    min-height: 100vh;
+}
+
 .dropdown-menu {
     height: 250px;
     overflow-y: scroll;
@@ -16,4 +20,8 @@
 
 .card {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer div {
+    color: white;
 }
