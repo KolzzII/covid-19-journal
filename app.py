@@ -1,4 +1,3 @@
-from ast import Not
 from flask import Flask, render_template
 from models import Estado
 from models import Noticia

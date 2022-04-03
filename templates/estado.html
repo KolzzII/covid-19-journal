@@ -1,7 +1,7 @@
 {% extends "base.html"%}
 {% block content %}
 {% for noticia in noticias %}
-<h1 class="text-center">{{ noticia.get_estado().get_nome() }} - ({{ noticia.get_estado().get_sigla()}})</h1>
+<h1 class="text-center p-4">{{ noticia.get_estado().get_nome() }} - ({{ noticia.get_estado().get_sigla()}})</h1>
 <div class="d-flex flex-wrap justify-content-center">
     <div class="d-inline-flex p-2 ">
         <div class="card" style="width: 28rem;">
