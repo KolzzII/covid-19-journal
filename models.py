@@ -1,5 +1,5 @@
 class Noticia:
-    def __init__(self, id, titulo, resumo, imagem, conteudo, data, categoria, estado):
+    def __init__(self, id, titulo, resumo, imagem, conteudo, data, categoria, estado, visualizacao, curtida):
         self.__id = id
         self.__titulo = titulo 
         self.__resumo = resumo
@@ -8,6 +8,8 @@ class Noticia:
         self.__data = data
         self.__categoria = categoria
         self.__estado = estado
+        self.__visualizacao = visualizacao
+        self.__curtida = curtida
    
     def get_id(self):
         return self.__id
@@ -32,6 +34,12 @@ class Noticia:
     
     def get_estado(self):
         return self.__estado
+
+    def get_visualizacao(self):
+        return self.__visualizacao
+
+    def get_curtida(self):
+        return self.__curtida
 
 
 class Estado:
