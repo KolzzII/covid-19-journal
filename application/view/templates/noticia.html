@@ -19,5 +19,34 @@
     </div>
     <hr>
     <p class="fs-5">{{ noticia[0].get_conteudo() }}</p>
+    <hr>
+    <h3 class="text-center p-4">Digite seu comentario</h3>
+    <form action="{{ url_for('enviar_comentario')}}" method="POST" enctype="application/x-www-form-urlencoded">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome:</label>
+        <input type="text" class="form-control" id="nome" name="nome">
+        <label for="email" class="form-label is-invalid">Email:</label>
+        <input type="email" class="form-control" id="email" name="email">
+        <label for="comentario">Comentário:</label>
+        <textarea class="form-control" name="comentario" id="comentario" cols="10" rows="3"></textarea>
+        <input type="submit" class="btn btn-primary" value="Salvar">
+      </div>
+    </form>
+    <div>
+      <h3 class="text-center p-4">Comentários</h3>
+      {% for i in comentarios %}
+      <div class="d-flex mb-3">
+        <div>
+          <img src="{{ url_for('static', filename = 'img/user.png') }}" alt="...">
+        </div>
+        <div class="list-group">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ i.nome }}</h5>
+          </div>
+          <p class="mb-1">{{ i.comentario }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
 </div>
 {% endblock %}
