@@ -10,6 +10,7 @@ class Noticia:
         self.__estado = estado
         self.__visualizacao = visualizacao
         self.__curtida = curtida
+        self.__comentario = []
    
     def get_id(self):
         return self.__id
@@ -40,3 +41,9 @@ class Noticia:
 
     def get_curtida(self):
         return self.__curtida
+
+    def get_comentario(self):
+        return self.__comentario
+
+    def set_comentario(self, comentario):
+        self.__comentario.append(comentario)

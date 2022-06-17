@@ -5,7 +5,4 @@ from application.model.dao.estado_dao import EstadoDAO
 
 @app.route("/")
 def home():
-    list_noticias = NoticiaDAO().lista_noticias()
-    list_estados = EstadoDAO().lista_estados()
-    print(list_noticias)
-    return render_template("index.html", noticias = list_noticias, estados = list_estados)
+    return render_template("index.html", noticias = NoticiaDAO().lista_noticias(), estados = EstadoDAO().lista_estados())

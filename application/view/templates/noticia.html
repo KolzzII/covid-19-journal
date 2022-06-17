@@ -21,7 +21,7 @@
     <p class="fs-5">{{ noticia[0].get_conteudo() }}</p>
     <hr>
     <h3 class="text-center p-4">Digite seu comentario</h3>
-    <form action="{{ url_for('enviar_comentario')}}" method="POST" enctype="application/x-www-form-urlencoded">
+    <form action="{{ url_for('exibir_noticia', id = noticia[0].get_id() )}}" method="POST" enctype="application/x-www-form-urlencoded">
       <div class="mb-3">
         <label for="nome" class="form-label">Nome:</label>
         <input type="text" class="form-control" id="nome" name="nome">

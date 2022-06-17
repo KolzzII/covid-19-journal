@@ -1,8 +1,6 @@
 from application.model.entity.estado import Estado
 from application.model.entity.noticia import Noticia
-from application.model.dao.comentario_dao import ComentarioDAO
 
-comentarioDAO = ComentarioDAO()
 acre = Estado(0, 'Acre', 'AC', 'https://mundodageografia.com.br/wp-content/uploads/2020/10/Bandeira_do_Acre-300x210.png')
 alagoas = Estado(1, 'Alagoas', 'AL', 'https://mundodageografia.com.br/wp-content/uploads/2020/10/Bandeira_de_Alagoas-300x200.png')
 amapa = Estado(2, 'Amapá', 'AP', 'https://mundodageografia.com.br/wp-content/uploads/2020/10/Bandeira_do_Amapa-300x210.png' )
