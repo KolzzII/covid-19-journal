@@ -6,3 +6,9 @@ class EstadoDAO:
 
     def lista_estados(self):
         return self._lista_estado
+
+    def exibir_estado(self, sigla):
+        for estado in self._lista_estado:
+            if estado.get_sigla() == sigla:
+                return estado
+        return False

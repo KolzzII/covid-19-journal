@@ -1,5 +1,4 @@
-from application.model.entity.noticia import Noticia
-from application.model.dao import estados, noticias
+from application.model.dao import noticias
 
 class NoticiaDAO:
     def __init__(self):
